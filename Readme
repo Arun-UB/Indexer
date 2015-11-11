@@ -1,0 +1,31 @@
+Indexer
+--------------------------------------------------------
+
+- Requires python 3.2
+- To run the program 
+	indexer.py Corpus Index
+	Example: python .\indexer.py .\tccorpus.txt .\index.out
+- The index will be stored in the index.out file 
+
+
+BM25
+---------------------------------------------------------
+
+- Requires python 3.2
+- To run the program 
+	bm25.py INDEX_FILE QUERIES_FILE MAX_RESULTS
+	Example: python .\bm25.py .\index.out .\queries.txt 100
+- The result will be stored in the results.eval file and is printed in the standard
+  output as well in the same format.
+
+
+
+ Implementation 
+ --------------------------------------------------------
+ - The inverted list is stored in the below format 
+ 	term|docId1:tf1;docId2:tf2.....
+ 	Example: honeywel|# 531,1;# 616,1;# 2211,1;# 2358,1;# 2928,1;
+- The bm25 ranks are stored as below or each query 
+	query_id Q0 doc_id rank BM25_score system_name
+	Example: 7 Q0 # 2896 81 5.8845286829645955 bm25_ab_01
+
